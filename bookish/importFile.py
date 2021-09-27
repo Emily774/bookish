@@ -1,4 +1,5 @@
 import sqlite3
+from sqlite3 import Error
 
 try:
     conn = sqlite3.connect('database.db')
@@ -18,7 +19,7 @@ sql_command = '''
     )'''
 
 cursor.execute(sql_command)
-
+print('here')
 # Commit the changes to the database
 conn.commit()
 
