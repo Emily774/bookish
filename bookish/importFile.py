@@ -19,8 +19,17 @@ sql_command = '''
     )'''
 
 cursor.execute(sql_command)
-print('here')
+
 # Commit the changes to the database
 conn.commit()
+
+sql_insert = '''
+    INSERT INTO contacts
+        (Firstname, Lastname, Email)
+    VALUES (
+        'Lols', 'Chocolate', 'lols@chocolate.com'
+    )
+
+'''
 
 conn.close()
